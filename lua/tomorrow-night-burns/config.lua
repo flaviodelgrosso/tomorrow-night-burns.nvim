@@ -35,7 +35,6 @@ local M = {}
 ---@field invert_tabline boolean?
 ---@field italic ItalicConfig?
 ---@field overrides table<string, HighlightDefinition>?
----@field color_overrides table<string, string>?
 ---@field strikethrough boolean?
 ---@field terminal_colors boolean?
 ---@field transparent_mode boolean?
@@ -59,7 +58,6 @@ M.default = {
   invert_tabline = false,
   inverse = true,
   contrast = "",
-  color_overrides = {},
   overrides = {},
   dim_inactive = false,
   transparent_mode = false,

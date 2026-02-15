@@ -1,11 +1,5 @@
 local M = {}
 
-local function apply_color_overrides(palette, overrides)
-  for key, hex in pairs(overrides or {}) do
-    palette[key] = hex
-  end
-end
-
 local function get_contrast_value(palette, contrast, role)
   local key = string.format("%s_dark_%s", role, contrast)
   local default_key = string.format("%s_dark", role)
@@ -18,8 +12,6 @@ end
 function M.get(palette, config)
   local p = vim.deepcopy(palette)
 
-  apply_color_overrides(p, config.color_overrides)
-
   local contrast = config.contrast
 
   local color_groups = {
@@ -30,7 +22,6 @@ function M.get(palette, config)
     bg4 = p.surface_dark_4,
     fg0 = p.surface_light_0,
     fg1 = p.surface_light_1,
-    fg2 = p.surface_light_2,
     fg3 = p.surface_light_3,
     fg4 = p.surface_light_4,
     primary = p.primary,
@@ -38,7 +29,6 @@ function M.get(palette, config)
     primary_soft = p.primary_soft,
     primary_muted = p.primary_muted,
     primary_dark = p.primary_dark,
-    primary_dark_alt = p.primary_dark_alt,
     secondary = p.secondary,
     secondary_active = p.secondary_active,
     secondary_soft = p.secondary_soft,

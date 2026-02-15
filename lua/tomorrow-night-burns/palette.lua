@@ -12,11 +12,8 @@ local palette = {
   surface_dark_4 = "#555555",
 
   -- Foreground/text surfaces
-  surface_light_0_hard = "#ffffff",
   surface_light_0 = "#f5f5f5",
-  surface_light_0_soft = "#eeeeee",
   surface_light_1 = "#ececec",
-  surface_light_2 = "#d0d0d0",
   surface_light_3 = "#b0b0b0",
   surface_light_4 = "#909090",
 
@@ -29,7 +26,6 @@ local palette = {
   secondary_soft = "#b0bec5",
   primary_active = "#d3494e",
   primary_dark = "#832e31",
-  primary_dark_alt = "#a63c40",
 
   -- Diff surfaces
   diff_primary_dark_hard = "#3d1517",
